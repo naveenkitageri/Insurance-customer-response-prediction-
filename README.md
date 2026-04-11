@@ -44,7 +44,7 @@ Bulit an end-to-end Machine Learning pipeline to predict customer response to in
   12. Model saving
 
 # Model performance model :  Accuracy score, recall
-1.Linear Regression : 0.88, 50 |
+1.Logistic Regression : 0.88, 50 |
 2.Decision Tree : 0.83, 60 |
 3.Tuned Decision Tree : 0.70, 80 |
 4.Random Forest : 0.86, 55 | 
