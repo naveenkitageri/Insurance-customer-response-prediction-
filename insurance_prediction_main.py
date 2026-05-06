@@ -1,4 +1,5 @@
 # Import all necessary modules 
+import os
 import numpy as np 
 import pandas as pd 
 from sklearn.model_selection import train_test_split, GridSearchCV
@@ -62,14 +63,22 @@ def train_model(df):
     print("Model training done....")
 
     # downloading train data 
-    dump(X.columns.tolist(), r"C:\Users\hp5cd\Documents\machine learning\capstone project\model file\model_columns.joblib")
-    dump((lower_bound, upper_bound), r"C:\Users\hp5cd\Documents\machine learning\capstone project\model file\premium_bounds.joblib")
-    dump(model, r"C:\Users\hp5cd\Documents\machine learning\capstone project\model file\RF_model.joblib")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__)
+    MODEL_COLUMNS_PATH = os.path.join(BASE_DIR, "model_columns.joblib")
+    PREMIUM_BOUNDS_PATH = os.path.join(BASE_DIR, "premium_bounds.joblib")
+    MODEL_PATH = os.path.join(BASE_DIR, "RF_model.joblib")
+    
+                               
+    dump(X.columns.tolist(), MODEL_COLUMNS_PATH)
+    dump((lower_bound, upper_bound), PREMIUM_BOUNDS_PATH)
+    dump(model, MODEL_PATH)
     print("Saved in your directory")
 
 def main():
     # Provide the correct file path to the location where the dataset is stored 
-    path = r"C:\Users\hp5cd\Documents\machine learning\capstone project\Data\data.csv"
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_PATH = os.path.join(BASE_DIR, "data.csv")
+    path = DATA_PATH
     df = load_data(path)
     data = preprocessing(df)
     train_model(data)
