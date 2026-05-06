@@ -1,4 +1,4 @@
-## Insurance-customer-response-prediction-
+## Insurance-Customer-Response-Prediction-
 Bulit an end-to-end Machine Learning pipeline to predict customer response to insurance policy offers using multiple classification models, including data preprocessing, feature engineering and hyperparameter tuning.
 
 - This project predicts whether a customer will respond (yes/no) to an insurance offer using various Machine Learning algorithm and selecting the best -performing model.
@@ -6,7 +6,7 @@ Bulit an end-to-end Machine Learning pipeline to predict customer response to in
 # 🚀 Live Demo
 
 
-# Project objective
+# Project Objective
 - To bulit a classification model that accurately predict customer response based on:
   - Customer demographics
   -   Policy-related information
@@ -46,7 +46,7 @@ Bulit an end-to-end Machine Learning pipeline to predict customer response to in
   11. Best model selection
   12. Model saving
 
-# Model performance model :  Accuracy score, recall
+# Model Performance Model :  Accuracy score, recall
 1.Logistic Regression : 0.88, 50 |
 2.Decision Tree : 0.83, 60 |
 3.Tuned Decision Tree : 0.70, 80 |
@@ -64,3 +64,5 @@ Bulit an end-to-end Machine Learning pipeline to predict customer response to in
 - Improve marketing campaign efficiency
 - Reduces operational costs
 - Enhances customer targeting strategy
+
+Hope you like it
