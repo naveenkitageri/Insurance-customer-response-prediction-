@@ -4,7 +4,7 @@ Bulit an end-to-end Machine Learning pipeline to predict customer response to in
 - This project predicts whether a customer will respond (yes/no) to an insurance offer using various Machine Learning algorithm and selecting the best -performing model.
 
 # 🚀 Live Demo
-
+https://naveenkitageri-insurance-customer-prediction.streamlit.app/
 
 # Project Objective
 - To bulit a classification model that accurately predict customer response based on:
