@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 # Provide the correct file path to the location where the dataset is stored 
-BASE_DIR = os.path.dirname(os.path.adspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "data.csv")
 MODEL_PATH = os.path.join(BASE_DIR, "RF_model.joblib")   
 PREMIUM_BOUND_PATH = os.path.join(BASE_DIR, "premium_bounds.joblib")
