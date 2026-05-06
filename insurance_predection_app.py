@@ -1,17 +1,24 @@
+import os
 import streamlit as st 
 from joblib import load
 import pandas as pd 
 import numpy as np
 
 # Provide the correct file path to the location where the dataset is stored 
-df = pd.read_csv(r"C:\Users\hp5cd\Documents\machine learning\capstone project\Data\data.csv")
+BASE_DIR = os.path.dirname(os.path.adspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data.csv")
+MODEL_PATH = os.path.join(BASE_DIR, "RF_model.joblib")   
+PREMIUM_BOUND_PATH = os.path.join(BASE_DIR, "premium_bounds.joblib")
+MODEL_COLUMNS_PATH = os.path.join(BASE_DIR, "model_columns.joblib")
+
+df = pd.read_csv(DATA_PATH)
 
 # load trained model 
-ml_model = load(r"C:\Users\hp5cd\Documents\machine learning\capstone project\model file\RF_model.joblib")
+ml_model = load(MODEL_PATH)
 
-lower_bound, upper_bound = load(r"C:\Users\hp5cd\Documents\machine learning\capstone project\model file\premium_bounds.joblib")
+lower_bound, upper_bound = load(PREMIUM_BOUND_PATH)
 
-model_columns = load(r"C:\Users\hp5cd\Documents\machine learning\capstone project\model file\model_columns.joblib")
+model_columns = load(MODEL_COLUMNS_PATH)
 
 # set title for UI
 st.title("Insurance Customer Response Prediction")
