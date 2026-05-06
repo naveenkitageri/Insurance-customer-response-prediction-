@@ -65,12 +65,12 @@ def train_model(df):
     # downloading train data 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__)
     MODEL_COLUMNS_PATH = os.path.join(BASE_DIR, "model_columns.joblib")
-    PREMIUM_BOUNDS_PATH = os.path.join(BASE_DIR, "premium_bounds.joblib")
+    PREMIUM_BOUND_PATH = os.path.join(BASE_DIR, "premium_bounds.joblib")
     MODEL_PATH = os.path.join(BASE_DIR, "RF_model.joblib")
     
                                
     dump(X.columns.tolist(), MODEL_COLUMNS_PATH)
-    dump((lower_bound, upper_bound), PREMIUM_BOUNDS_PATH)
+    dump((lower_bound, upper_bound), PREMIUM_BOUND_PATH)
     dump(model, MODEL_PATH)
     print("Saved in your directory")
 
