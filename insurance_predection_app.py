@@ -21,7 +21,7 @@ lower_bound, upper_bound = load(PREMIUM_BOUND_PATH)
 model_columns = load(MODEL_COLUMNS_PATH)
 
 # set title for UI
-st.title("Insurance Customer Response Prediction")
+st.title("🚘Insurance Customer Response Prediction")
 
 # input filed of UI
 st.header("Enter Customer Details")
